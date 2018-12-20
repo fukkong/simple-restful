@@ -87,5 +87,5 @@ func main() {
 	headersOk := handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Access-Control-Allow-Origin"})
 	methodsOk := handlers.AllowedMethods([]string{"GET", "DELETE", "POST", "OPTIONS"})
 
-	log.Fatal(http.ListenAndServe(":8000", handlers.CORS(corsObj, headersOk, methodsOk)(router)))
+	log.Fatal(http.ListenAndServe(":5000", handlers.CORS(corsObj, headersOk, methodsOk)(router)))
 }
